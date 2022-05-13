@@ -12,9 +12,13 @@
 
   <div id="app">
     <h1>Vue-email-list</h1>
-    <ul>
-      <li v-for="mail in listaMail">{{mail}}</li>
-    </ul>
+    <div v-if="isLoading"> Loading... </div>
+    <div v-else>
+      <ul>
+        <li v-for="mail in listaMail">{{mail}}</li>
+      </ul>
+    </div>
+    
   </div>
   
   <script src="./script.js"></script>
